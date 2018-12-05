@@ -11,7 +11,8 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  var array = arr.map(i => Math.pow(2, i));
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +22,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  var array = [];
+  arr.forEach(i => {
+    var ans =  Math.pow(2, i);
+    array.push(ans);
+  });
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,7 +38,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
