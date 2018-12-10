@@ -12,7 +12,11 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  let result = 0;
+  input.map(ele => {
+    ele.map(num => {if (num === target) {result++;}});
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,11 +109,11 @@ let starWarsData = [{
   eye_color: 'brown',
   birth_year: '19BBY',
   gender: 'female'
-}]
+}];
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -119,7 +123,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -141,7 +145,7 @@ describe('Testing challenge 1', () => {
   test('It should work on empty arrays', () => {
     expect(count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []])).toStrictEqual(4);
     expect(count(5, [])).toStrictEqual(0);
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
